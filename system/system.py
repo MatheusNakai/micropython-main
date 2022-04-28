@@ -28,10 +28,12 @@ def run():
             led.low()
             utime.sleep(0.2)
             oled.display_clear()
+            oled.display_off()
         
         else:
             led.high()
             utime.sleep(0.1)
 
             oled.display_clear()
+            oled.display_text("Enter Password:",0,0)
         

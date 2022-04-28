@@ -13,3 +13,9 @@ class Oled(object):
     def disply_clear(self):
         self.oled.fill(0)
         self.oled.show()
+
+    def display_on(self):
+        self.oled.poweron()
+    
+    def display_off(self):
+        self.oled.poweroff()
