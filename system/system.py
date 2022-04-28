@@ -21,7 +21,7 @@ def run():
     non_number = ["A","B","C","D","*","#"]
     password = []
     i=0
-    oled.display_text("Welcome",0,0)
+    oled.Oled_text("Welcome",0,0)
 
     while 200>i:
         if movement_sensor.value()==0:
@@ -35,5 +35,6 @@ def run():
             utime.sleep(0.1)
 
             oled.display_clear()
-            oled.display_text("Enter Password:",0,0)
+            oled.display_on()
+            oled.Oled_text("Enter Password:",0,0)
         
