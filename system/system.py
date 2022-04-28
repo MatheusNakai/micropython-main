@@ -3,6 +3,7 @@ from use_cases.Keypad_UC import Keypad_UC
 from use_cases.Oled_UC import Oled_UC
 from models.User import User
 from machine import Pin, I2C
+import utime
 
 
 
@@ -18,6 +19,7 @@ def run():
     keypad = Keypad_UC()
     fileRW= FileRW_UC()
 
+    list_user = fileRW.read()
     non_number = ["A","B","C","D","*","#"]
     password = []
     i=0
@@ -37,4 +39,27 @@ def run():
             oled.display_clear()
             oled.display_on()
             oled.Oled_text("Enter Password:",0,0)
-        
+            key = keypad.Keypad4x4Read()
+            if key in non_number:
+                if key == non_number[0]:
+                    # Turn off the display and clear password
+                    oled.display_off()
+                    try:
+                        password.clear()
+                    except:
+                        pass
+                elif key == non_number[1]:
+                    # Clear password
+                    try:
+                        password.clear()
+                    except:
+                        pass
+                elif key == non_number[2]:
+                    # Delete the last character in the password
+                    try:
+                        password.pop()
+                    except:
+                        pass
+                elif key == non_number[3]:
+                    # Submit the password
+
