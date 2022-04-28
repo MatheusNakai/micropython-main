@@ -12,14 +12,19 @@ def run():
     The main function of the system.
     """
     led = Pin(28, Pin.OUT)
-    pir = Pin(16,Pin.IN, Pin.PULL_UP)
+    movement_sensor = Pin(16,Pin.IN, Pin.PULL_UP)
     led.low()
     oled = Oled_UC()
     keypad = Keypad_UC()
     fileRW= FileRW_UC()
+
     non_number = ["A","B","C","D","*","#"]
     password = []
-
-    
+    i=0
     oled.display_text("Welcome",0,0)
-    print("Hello World!")
+
+    while 200>i:
+        if movement_sensor.value()==0:
+            led.low()
+            utime.sleep(0.2)
+        
