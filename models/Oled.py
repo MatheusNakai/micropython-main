@@ -9,3 +9,7 @@ class Oled(object):
     def display_text(self,text,x,y):
         self.oled.text(text,x,y)
         self.oled.show()
+    
+    def disply_clear(self):
+        self.oled.fill(0)
+        self.oled.show()

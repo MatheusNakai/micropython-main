@@ -27,4 +27,11 @@ def run():
         if movement_sensor.value()==0:
             led.low()
             utime.sleep(0.2)
+            oled.display_clear()
+        
+        else:
+            led.high()
+            utime.sleep(0.1)
+
+            oled.display_clear()
         
