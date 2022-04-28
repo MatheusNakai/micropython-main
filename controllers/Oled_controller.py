@@ -6,15 +6,15 @@ class Oled_controller(object):
     def __init__(self):
         self.oled = Oled()
 
-    def Oled_display(self, text:str, x:int, y:int):
-        self.oled.Oled_display(text, x, y)
+    def oled_display(self, text:str, x:int, y:int):
+        self.oled.oled_display(text, x, y)
 
-    def Oled_clear(self):
+    def oled_clear(self):
         self.oled.Oled_clear()
     
-    def Oled_on(self):
+    def oled_on(self):
         self.oled.Oled_on()
     
-    def Oled_off(self):
+    def oled_off(self):
         self.oled.Oled_off()
         
