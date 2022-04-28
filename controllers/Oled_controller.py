@@ -10,7 +10,7 @@ class Oled_controller(object):
         self.oled.Oled_display(text, x, y)
 
     def Oled_clear(self):
-        self.oled.display_clear()
+        self.oled.Oled_clear()
     
     def Oled_on(self):
         self.oled.Oled_on()
