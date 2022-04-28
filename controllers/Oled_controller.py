@@ -9,12 +9,12 @@ class Oled_controller(object):
     def display_text(self, text:str, x:int, y:int):
         self.oled.oled_display(text, x, y)
 
-    def oled_clear(self):
-        self.oled.Oled_clear()
+    def display_clear(self):
+        self.oled.display_clear()
     
-    def oled_on(self):
-        self.oled.Oled_on()
+    def display_on(self):
+        self.oled.display_on()
     
-    def oled_off(self):
-        self.oled.Oled_off()
+    def display_off(self):
+        self.oled.display_off()
         
