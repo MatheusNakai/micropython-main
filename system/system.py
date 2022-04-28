@@ -61,5 +61,10 @@ def run():
                     except:
                         pass
                 elif key == non_number[3]:
+                    oled.display_clear()
                     # Submit the password
-
+                    if len(password)<5:
+                        oled.Oled_text("Password too short",0,1)
+                    
+                    if len(password)==5:
+                        print("Password is:",password)

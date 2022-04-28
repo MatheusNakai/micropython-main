@@ -1,4 +1,4 @@
-from machine import Pin, I2C
+""" from machine import Pin, I2C
 import ujson
 import utime
 from ssd1306 import SSD1306_I2C
@@ -35,5 +35,15 @@ while i<200:
         utime.sleep(0.3)
     
     
+ """
 
-            
+from models.User import User
+from use_cases.FileRW_UC import FileRW_UC
+f = FileRW_UC('json.txt')
+user = User(10,1234)
+user1 = User(11,1234)
+
+l = [user.__dict__,user1.__dict__]
+
+f.write(l)
+

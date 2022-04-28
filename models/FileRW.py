@@ -1,4 +1,4 @@
-import ujson
+import json
 
 class FileRW(object):
     
@@ -9,7 +9,7 @@ class FileRW(object):
         try:
             with open('json.txt','a') as f:
                 for user in list_dict:
-                    json = ujson.dump(user)
+                    json = json.dump(user)
                     f.write(f'{json}\n')
         except:
             print("Error writing to file")
