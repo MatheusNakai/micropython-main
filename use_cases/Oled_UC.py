@@ -5,8 +5,8 @@ class Oled_UC(object):
     def __init__(self):
         self.oled_controller = Oled_controller()
         
-    def display_text(self,text,x,y):
-        self.oled_controller.display_text(text,x,y)
+    def oled_text(self,text,x,y):
+        self.oled_controller.oled_text(text,x,y)
 
     def display_clear(self):
         self.oled_controller.display_clear()
