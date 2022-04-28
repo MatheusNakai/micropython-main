@@ -1,4 +1,4 @@
-from controller.Oled_controller import Oled_controller
+from controllers.Oled_controller import Oled_controller
 
 class Oled_UC(object):
 
