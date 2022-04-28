@@ -10,12 +10,12 @@ class Oled(object):
         self.oled.text(text,x,y)
         self.oled.show()
     
-    def Oled_clear(self):
+    def display_clear(self):
         self.oled.fill(0)
         self.oled.show()
 
-    def Oled_on(self):
+    def display_on(self):
         self.oled.poweron()
     
-    def Oled_off(self):
+    def display_off(self):
         self.oled.poweroff()
