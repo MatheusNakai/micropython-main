@@ -20,10 +20,7 @@ class FileRW(object):
         l=[]
         try:
             with open('json.txt','r') as f:
-            
-                for i in f:
-                    line=i.strip()
-                    l.append(line)
-            return l    
+                l = ujson.load(f)
+            return l
         except:
             print("Error reading file")
