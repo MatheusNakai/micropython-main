@@ -73,14 +73,15 @@ def run():
                     # Submit the password
                     if len(password)<5:
                         oled.Oled_text("Password too short",0,1)
-                    
-                if len(password)==5:
+
+            if key in number:
+                password += key
+                oled.Oled_text(password,0,1)
+
+            if len(password)==5:
                     if check_password(list_user, password):
                         oled.Oled_text("Welcome",0,0)
                         oled.display_on()
                         utime.sleep(1)
                         oled.display_clear()
                         oled.display_off()
-            if key in number:
-                password += key
-                oled.Oled_text(password,0,1)
