@@ -50,7 +50,7 @@ def run():
             key = keypad.Keypad4x4Read()
             if key in non_number:
                 if key == non_number[0]:
-                    # Turn off the display and clear password
+                    # Turn off the display and clear password and lock door
                     oled.display_off()
                     try:
                         password = ""
@@ -85,3 +85,6 @@ def run():
                         utime.sleep(1)
                         oled.display_clear()
                         oled.display_off()
+                        # Start cervo motor to unlock door
+
+                    
