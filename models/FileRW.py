@@ -11,7 +11,7 @@ class FileRW(object):
             with open('json.txt','a') as f:
                 for user in list_dict:
                     json = ujson.dump(user)
-                    f.write(f'{json}\n')
+                    f.write(f'{json},\n')
         except:
             print("Error writing to file")
 
