@@ -15,11 +15,11 @@ class Keypad(object):
                 ["A","B","C","D"]]        
 
     def Keypad4x4Read(self):
-        for r in self.rows:
+        for r in self.row_list:
             r.value(0)
-            result=[self.cols[0].value(),self.cols[1].value(),self.cols[2].value(),self.cols[3].value()]
+            result=[self.col_list[0].value(),self.col_list[1].value(),self.col_list[2].value(),self.col_list[3].value()]
             if min(result)==0:
-                key=self.key_map[int(self.rows.index(r))][int(result.index(0))]
+                key=self.key_map[int(self.row_list.index(r))][int(result.index(0))]
                 r.value(1) # manages key keept pressed
                 return(key)
             r.value(1)
