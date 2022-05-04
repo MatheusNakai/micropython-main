@@ -1,14 +1,12 @@
+from controller.FileRW_controller import FileRW_controller
 
+class FileRW_UC(object):
 
-from controller.Servo_controller import Servo_controller
-
-class Servo_UC(object):
-    
-    def __init__(self):
-        self.servo_controller = Servo_controller()
-    
-    def open_door(self):
-        self.servo_controller.open_door()
-    
-    def close_door(self):
-        self.servo_controller.close_door()
+    def __init__(self, file_name):
+        self.file_rw_controller = FileRW_controller(file_name)
+        
+    def write(self,list_dict):
+        self.file_rw_controller.write(list_dict)
+        
+    def read(self):
+        return self.file_rw_controller.read()
