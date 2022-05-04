@@ -50,7 +50,7 @@ def run():
             key = keypad.Keypad4x4Read()
             if key in non_number:
                 if key == non_number[0]:
-                    # Turn off the display and clear password and lock door
+                    # Turn off the display, clear password and lock door
                     oled.display_off()
                     try:
                         password = ""
