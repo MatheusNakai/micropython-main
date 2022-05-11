@@ -10,7 +10,7 @@ class Servo(object):
     
     def open_door(self):
         if self.state== 'close':
-            self.pwm.duty_u16(10000)
+            self.pwm.duty_u16(5000)
             self.state = 'open'
     
     def close_door(self):
